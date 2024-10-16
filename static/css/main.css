@@ -1,3 +1,46 @@
+/** Basic Reset */
+* {
+  min-width: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
 /** Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
