@@ -1,6 +1,7 @@
 :root {
   color-scheme: light dark;
   accent-color: hsl(300, 100%, 30%);
+  
   --brand-color: hsl(300, 100%, 30%);
   
   --font-color-light: hsl(0, 0%, 10%);
@@ -48,7 +49,6 @@ canvas {
 }
 
 body {
-
   min-height: 100dvh;
 }
 
@@ -69,7 +69,10 @@ p {
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
 /** Basic styling */
-body { font-family: Helvetica, Arial, sans-serif; font-size: 20px; line-height: 1.5; font-weight: 300; color: #111111; background-color: #fdfdfd; -webkit-text-size-adjust: 100%; }
+body { 
+  font-family: var(--font-family-sans);
+  color: light-dark(var(--font-color-light), var(--font-color-dark));
+  background-color: light-dark(var(--background-light), var(--background-dark)); -webkit-text-size-adjust: 100%; }
 
 /** Set `margin-bottom` to maintain vertical rhythm */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { margin-bottom: 15px; }
