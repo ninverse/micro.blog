@@ -24,32 +24,48 @@
 }
 
 /** Basic Reset */
-* {
-  min-width: 0;
-  font: inherit;
-}
-
-*,
-*::before,
+*, 
+*::before, 
 *::after {
   box-sizing: border-box;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+
 }
 
-img,
-picture,
-svg,
-video,
-canvas {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-  font-style: italic;
-  background-repeat: no-repeat;
-  background-size: cover;
+img, picture, svg, video, canvas{
+    max-width: 100%;
+    height: auto; 
+    vertical-align: middle; 
+    font-style: italic; 
+    background-repeat: no-repeat; 
+    background-size: cover;
 }
 
+input, button, textarea, select{
+    font: inherit; 
+}
+
+@media (prefers-reduced-motion: reduce){
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+        transition: none;
+    }
+}
+
+/** Reset some basic elements */
 body {
   min-height: 100dvh;
+  font-family: var(--font-family-sans);
+  color: light-dark(var(--font-color-light), var(--font-color-dark));
+  background-color: light-dark(var(--background-light), var(--background-dark));
 }
 
 h1, h2, h3, h4, h5, h6, blockquote {
@@ -60,14 +76,9 @@ p {
   text-wrap: pretty;
 }
 
-/** Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
 
 /** Basic styling */
-body { 
-  font-family: var(--font-family-sans);
-  color: light-dark(var(--font-color-light), var(--font-color-dark));
-  background-color: light-dark(var(--background-light), var(--background-dark)); -webkit-text-size-adjust: 100%; }
 
 /** Set `margin-bottom` to maintain vertical rhythm */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { margin-bottom: 15px; }
