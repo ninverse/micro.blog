@@ -4,11 +4,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1">
   <meta name="fediverse:creator" content="@ninverse@ninverse.social">
 
-  <title>
-      {{ block "title" . }}
-      {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Site.Title }} - {{ .Title }}{{ end }}
-      {{ end }}
-  </title>
+  <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ if .Title }}{{.Title }} - {{ .Site.Title }}{{else}}{{.Summary | truncate 50 }}{{end}}{{ end }}{{ end }}</title>
 
   <meta name="description" content="{{ if .IsHome }}Explore the Ninverse and discover the innovative universe of Nintendo! In-depth analysis and commentary on Nintendo products and its unique vision of gaming.{{ else }}{{ .Summary | truncate 160 }}{{ end }}">
 
@@ -16,4 +12,5 @@
   <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
   <link rel="canonical" href="{{ .Permalink }}">
   {{ partial "microblog_head.html" . }}
+  
 </head>
