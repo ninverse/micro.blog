@@ -7,8 +7,6 @@
   <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ if .Title }}{{.Title }} - {{ .Site.Title }}{{else}}{{.Summary | truncate 50 }}{{end}}{{ end }}{{ end }}</title>
 
   <meta name="description" content="{{ if .IsHome }}Explore the Ninverse and discover the innovative universe of Nintendo! In-depth analysis and commentary on Nintendo products and its unique vision of gaming.{{ else }}{{ .Summary | truncate 160 }}{{ else }}Ninverse Page{{ end }}">
-  
-  <meta name="description" content="{{ if .IsPage }}{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}{{ else }}Master Tinkerer>
 
   <link rel="shortcut icon" href="https://micro.blog/{{ .Site.Author.username }}/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="{{ "css/main.min.css" | relURL }}">
