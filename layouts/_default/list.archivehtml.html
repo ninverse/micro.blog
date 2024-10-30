@@ -1,5 +1,6 @@
 {{ define "main" }}
 
+	<p>Ninverse Archive</p>
 	{{ $list := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
 	{{ if gt (len $list) 0 }}
 		<div class="archive_categories" style="border-bottom: 1px solid lightgray; padding-bottom: 15px; margin-bottom: 30px;">
