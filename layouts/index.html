@@ -12,10 +12,10 @@
         <a href="{{ .Permalink }}" class="u-url"><span class="post-meta"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time></span></a>
 
         <div class="e-content">
-         	{{ .Content }}
-        </div>
-      </li>
-    {{ end }}
+        {{ .Summary }}
+        {{ if .Truncated }}
+          <p><a href="{{ .RelPermalink }}">Read More</a></p>
+        {{ end }}
   </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "feed.xml" | absURL }}">via RSS</a></p>
