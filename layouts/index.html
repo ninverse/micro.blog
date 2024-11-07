@@ -12,7 +12,7 @@
         <a href="{{ .Permalink }}" class="u-url"><span class="post-meta"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time></span></a>
 
         <div class="e-content">
-          {{ .Summary }}
+          {{ .Summary | truncate 300 }}
            {{ if .Truncated }}
              <p><a href="{{ .RelPermalink }}">Read More</a></p>
            {{ end }}
