@@ -8,7 +8,7 @@
           
         <span class = "categories">
         {{ range .Params.categories }}
-        <a href="/categories/{{ . | urlize }}"> {{ . }}</a>
+        <a href="{{ .Site.BaseURL }}/categories/{{ . | urlize }}"> {{ . }}</a>
         {{ end }}
         </span>
         
