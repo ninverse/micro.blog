@@ -6,9 +6,15 @@
 	{{ range $paginator.Pages  }}
         <li class="h-entry">
           
+                           {{- range $taxonomy := .Site.Taxonomies.categories -}} 
+                               <a href="{{ .Page.RelPermalink }}">
+                                   {{ $taxonomy.Name }}
+                               </a>         
+                           {{- end -}} 
+          
         <span class = "categories">
         {{ range .Params.categories }}
-        <a href="{{ .Site.BaseURL }}/categories/{{ . | urlize }}"> {{ . }}</a>
+        <a href="/categories/{{ . | urlize }}"> {{ . }}</a>
         {{ end }}
         </span>
         
