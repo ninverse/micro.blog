@@ -7,7 +7,7 @@
         <li class="h-entry"> 
           
                      {{ range .Params.categories }}
-                        <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                        <a href="{{ "/categories/" | absLangURL "/" }}{{ . | urlize }}">{{ . }}</a>
                       {{ end }} 
           
         <span class= "categories">
