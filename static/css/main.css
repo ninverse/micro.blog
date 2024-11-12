@@ -1,8 +1,8 @@
 :root {
   color-scheme: light dark;
-  accent-color: hsl(300, 100%, 30%);
+  accent-color: hsl(210, 100%, 50%);
   
-  --brand-color: hsl(300, 100%, 30%);
+  --brand-color: hsl(249, 74%, 60%);
   
   --font-color-light: hsl(0, 0%, 10%);
   --font-color-dark: hsl(0, 0%, 94%);
