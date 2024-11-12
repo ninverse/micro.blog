@@ -6,16 +6,12 @@
 	{{ range $paginator.Pages  }}
         <li class="h-entry"> 
           
-                     {{ $baseURL := .Site.BaseURL }}
-                     {{ range $category := .Params.Categories }}
-                       {{ $categoryURL := printf "%s/categories/%s/" $baseURL (urlize $category) }}
-                       <a href="{{ $categoryURL }}">{{ $category }}</a>
-                     {{ end }}
-          
         <span class= "categories">
-        {{ range .Params.categories }}
-        <a href="/categories/{{ . | urlize }}"> {{ . }}</a>
-        {{ end }}
+          {{ $baseURL := .Site.BaseURL }}
+           {{ range $category := .Params.Categories }}
+             {{ $categoryURL := printf "%scategories/%s/" $baseURL (urlize $category) }}
+             <a href="{{ $categoryURL }}">{{ $category }}</a>
+           {{ end }}
         </span>
         
 		{{ if .Title }}
