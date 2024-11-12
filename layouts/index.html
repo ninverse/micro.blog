@@ -4,15 +4,15 @@
   <ul class="post-list">
 	{{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 25) }}
 	{{ range $paginator.Pages  }}
-        <li class="h-entry">
+        <li class="h-entry"> 
           
-                           {{- range $taxonomy := .Site.Taxonomies.categories -}} 
-                               <a href="{{ .Page.RelPermalink }}">
-                                   {{ $taxonomy.Name }}
-                               </a>         
-                           {{- end -}} 
+                     {{ range $category := .Params.Categories }}
+                       <p>
+                         {{ $category }}
+                       </p>
+                     {{ end }} 
           
-        <span class = "categories">
+        <span class= "categories">
         {{ range .Params.categories }}
         <a href="/categories/{{ . | urlize }}"> {{ . }}</a>
         {{ end }}
