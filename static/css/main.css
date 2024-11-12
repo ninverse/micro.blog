@@ -1,8 +1,8 @@
 :root {
   color-scheme: light dark;
-  accent-color: hsl(210, 100%, 50%);
+  accent-color: hsl(17, 100%, 56%);
   
-  --brand-color: hsl(249, 74%, 60%);
+  --brand-color: hsl(210, 100%, 50%);
   
   --font-color-light: hsl(0, 0%, 10%);
   --font-color-dark: hsl(0, 0%, 94%);
@@ -94,9 +94,9 @@ li > ul, li > ol { margin-bottom: 0; }
 h1, h2, h3, h4, h5, h6 { font-weight: 300; }
 
 /** Links */
-a { color: hsl(300, 100%, 30%); text-decoration-skip-ink: auto; }
-a:visited { color: hsl(300, 100%, 15%); }
-a:hover { color: hsl(300, 100%, 30%); text-decoration: underline; }
+a { color: hsl(249, 74%, 60%); text-decoration-skip-ink: auto; }
+a:visited { color: hsl(249, 74%, 60%); }
+a:hover { color: hsl(249, 74%, 60%); text-decoration: underline; }
 
 /** Blockquotes */
 blockquote { color: #828282; border-left: 4px solid #e8e8e8; padding-left: 15px; font-size: 18px; letter-spacing: -1px; font-style: italic; }
