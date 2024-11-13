@@ -6,19 +6,17 @@
 	{{ range $paginator.Pages  }}
         <li class="h-entry"> 
           
-        <span class= "categories">
+          <a href="{{ .Permalink }}" class="nav-url"><time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time></a>
+          &middot;
           {{ $baseURL := .Site.BaseURL }}
            {{ range $category := .Params.Categories }}
              {{ $categoryURL := printf "%scategories/%s/" $baseURL (urlize $category) }}
-             <a href="{{ $categoryURL }}">{{ $category }}</a>
+             <a class="post-category" href="{{ $categoryURL }}">{{ $category }}</a>
            {{ end }}
-        </span>
         
 		{{ if .Title }}
 			<h1 class="p-name"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
 		{{ end }}
-
-        <a href="{{ .Permalink }}" class="u-url"><span class="post-meta"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time></span></a>
 
         <div class="e-content">
           {{ .Summary | truncate 300 }}
